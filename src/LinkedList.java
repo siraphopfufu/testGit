@@ -135,16 +135,9 @@ public class LinkedList {
 			}
 			itr.next();		
 		}
+		ListNode newListNode = new ListNode(c, itr.currentNode.nextNode);
+		itr.currentNode.nextNode = newListNode;
 		
-		if (itr.currentNode.nextNode == null) {
-			ListNode newListNode = new ListNode(c);
-			itr.currentNode.nextNode = newListNode;
-		} else { 
-			ListNode newListNode = new ListNode(c, itr.currentNode.nextNode);
-			itr.currentNode.nextNode = newListNode;
-		}
-		
-			
 	}
 	
 	//Remove the contact pointed by the iterator, i, and then returns an iterator pointing to the next contact. 
